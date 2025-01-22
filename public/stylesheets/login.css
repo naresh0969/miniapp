@@ -1,0 +1,84 @@
+/* General Reset */
+body, h2, form, input, div, a {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background-color: white; /* Set the body background color to white */
+  color: #2d3436;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: white;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow only for the container */
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #2d3436;
+  font-weight: bold;
+}
+
+form input[type="email"],
+form input[type="password"] {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s ease;
+}
+
+form input[type="email"]:focus,
+form input[type="password"]:focus {
+  border-color: #0984e3;
+  outline: none;
+}
+
+form .button-container {
+  margin-top: 20px;
+}
+
+form input[type="submit"] {
+  background-color: #0984e3;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+  background-color: #006aff;
+}
+
+form a {
+  display: block; /* Placed below the button */
+  margin-top: 10px;
+  font-size: 14px;
+  color: #0984e3;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+form a:hover {
+  color: #006aff;
+}

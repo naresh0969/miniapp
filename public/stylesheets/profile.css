@@ -1,0 +1,121 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.profile-container {
+  width: 80%;
+  margin: 20px auto;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.profile-header img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Circular profile picture */
+  object-fit: cover;
+  border: 2px solid #ddd;
+}
+
+.profile-header h4 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.profile-header a {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-left: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.profile-header a:first-of-type {
+  background-color: #007bff; /* Blue for 'Change Profile' */
+  color: #fff;
+}
+
+.profile-header a:first-of-type:hover {
+  background-color: #0056b3;
+}
+
+.profile-header a:last-of-type {
+  background-color: #dc3545; /* Red for 'Logout' */
+  color: #fff;
+}
+
+.profile-header a:last-of-type:hover {
+  background-color: #a71d2a; /* Darker red on hover */
+}
+
+textarea {
+  width: 100%;
+  height: 100px; /* Fixed size */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  font-family: Arial, sans-serif;
+}
+
+input[type="submit"] {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #218838;
+}
+
+.post-container {
+  margin: 20px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post-header p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.post-buttons a {
+  text-decoration: none;
+  margin-right: 10px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.post-buttons a:hover {
+  background-color: #0056b3;
+}

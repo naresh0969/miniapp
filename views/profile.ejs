@@ -1,0 +1,47 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile</title>
+  <link rel="stylesheet" href="/stylesheets/profile.css">
+</head>
+<body>
+  <div class="profile-container">
+    <div class="profile-header">
+      <div>
+        <img src="/images/uploads/<%=user.profilepic%>" alt="Profile Picture">
+        <h4>Hello, <%=user.name%></h4>
+      </div>
+      <div>
+        <a href="/profile/upload">Change Profile</a>
+        <a href="/logout">Logout</a>
+      </div>
+    </div>
+
+    <form action="/post" method="post">
+      <textarea name="content" placeholder="What's on your mind?"></textarea>
+      <br><br>
+      <input type="submit" value="Create New Post">
+    </form>
+
+    <div>
+      <h3>Your Posts</h3>
+      <% user.posts.reverse().forEach((post) => { %>
+        <div class="post-container">
+          <div class="post-header">
+            <p>@<%= user.username %></p>
+          </div>
+          <p><%= post.content %></p>
+          <div class="post-buttons">
+            <a href="/like/<%= post._id %>">
+              <%= post.likes.indexOf(user.id) === -1 ? "Like" : "Unlike" %>
+            </a>
+            <a href="/edit/<%= post._id %>">Edit</a>
+          </div>
+        </div>
+      <% }); %>
+    </div>
+  </div>
+</body>
+</html>
